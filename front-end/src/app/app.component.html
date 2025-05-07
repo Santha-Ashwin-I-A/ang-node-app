@@ -1,4 +1,22 @@
-<ul>
-  <div class="flex p-4 justify-center" *ngFor="let item of data">{{ item.name }}</div>
-  <div>hello</div>
-</ul>
+<div class="bg-black h-screen">
+  <div class="flex justify-center text-5xl text-cyan-800 text-shadow-md text-shadow-lime-600 shadow-2xl shadow-blue-500">
+    Products
+  </div>
+  <div 
+  class="grid hover:bg-white w-[150px] hover:shadow-amber-400 m-5 rounded-3xl gap-3 p-6 shadow-2xl shadow-fuchsia-700 bg-blue-200 justify-between border-2 border-b-blue-800 border-r-emerald-500 border-l-green-500 border-t-cyan-400" 
+  *ngFor="let item of data"
+  >
+    <div class="text-3xl">
+      {{ item.name }}
+    </div>
+    <div>
+      {{item.description}}
+    </div>
+    <div class="flex w-[50px] justify-center text-blue-900">
+      price:
+      <div class="text-blue-1000">
+        {{item.price}}
+      </div> 
+    </div>
+  </div>
+</div>
